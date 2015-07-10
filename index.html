@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" ng-app="eventcatApp">
+
+<head>
+    <title>OSIsoft 2015 Event Schedule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="css/slideshow.css" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="text/javascript" src="angular/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="angular/angular-sanitize/angular-sanitize.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script type="text/javascript" src="scripts/slideshow.js"></script>
+    <script src="//app-sjh.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <!--     <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="#/cities"><img class="logo" src="img/OSIsoft_Logo.png" alt="OSIsoft" /></a>
+            <span class="events">2015 Event Calendar</span>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <div ng-controller="DisplayCtrl" ng-show="isActive('/cities')" class="osiSlider">
+                <ul class="osiSliderImgList" id="sliderList" data-interval="5000">
+                    <li>
+                        <a href="http://www.osisoft.com/uc2015/sf/index.html">
+                            <img alt="Users Conference 2015" src="img/banner1.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.osisoft.com/corporate/events/latamrc/index.html">
+                            <img alt="2015 Latam Regional Conference" src="img/banner2.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.osisoft.com/corporate/Events/Brussels_Belgium.html">
+                            <img alt="2015 Brussels, Belgium Transmission &amp; Distribution Industry Forum" src="img/banner3.jpg" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="sliderImages" id="slider"></div>
+                <div class="sliderCntrlsArea">
+                    <div class="sliderCtnrls">
+                        <span class="sliderNextPrev" id="sliderBtnPrev">◀</span>
+                        <span id="sliderPos"></span>
+                        <span class="sliderNextPrev" id="sliderBtnNext">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div ng-view></div>
+
+
+
+<!--             <div ng-controller="DisplayCtrl" ng-hide="isActive('/cities')" class="panel-right">
+                <div align="center">
+                    <h2>Register Below</h2></div>
+                <form id="mktoForm_2598"></form>
+                <script>
+                MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", 2598);
+                </script>
+                <br>
+                <img src="img/side_column_image.jpg" alt="" />
+                <h2>Contact Us</h2>
+                <strong>For general questions</strong>, please contact NAM Events at
+                <br>
+                <a href="mailto:NAMevents@osisoft.com">NAMevents@osisoft.com</a>
+                <br>
+                <br>
+            </div>
+            <div class="clear margin10"></div>
+        </div> -->
+    </div>
+    <div class="footer">
+        <div class="image-links">
+            <ul class="social">
+                <li class="social_twitter">
+                    <a href="https://twitter.com/OSIsoft" target="_blank"></a>
+                </li>
+                <li class="social_facebook">
+                    <a href="http://www.facebook.com/OSIsoft" target="_blank"></a>
+                </li>
+                <li class="social_linkedin">
+                    <a href="http://www.linkedin.com/company/osisoft" target="_blank"></a>
+                </li>
+                <li class="social_pisquare">
+                    <a href="http://pisquare.osisoft.com" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</body>
+
+</html>
