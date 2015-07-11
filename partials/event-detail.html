@@ -44,8 +44,6 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
             </ul>
             <p>{{city.content2}}</p>
         </div>
-        <!-- <div ng-bind-html="{{city.blurb}}"></div> -->
-        <!-- <p>{{city.LandingPageContent}}.split(&quot;\n&quot;)[0]</p> -->
         <div> </div>
         <div> </div>
         <div> </div>
@@ -53,10 +51,8 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     <div class="panel-right">
         <div align="center">
             <h2>Register Below</h2></div>
-        <h3>{{city.mktoId|num}}</h3>
+<!--         <h3>{{city.mktoId|num}}</h3> -->
         <form class="ptl" id="mktoForm_{{city.mktoId}}"></form>
-        <div ng-controller="htmlCtrl as hi"><span ng-bind-html="to_trusted(hi.html)"></span>
-        </div>
         <br>
         <img src="img/side_column_image.jpg" alt="" />
         <h2>Contact Us</h2>
@@ -68,4 +64,4 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     </div>
     <div class="clear margin10"></div>
 </div>
-<!-- <script>MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", 2620);</script> -->
+

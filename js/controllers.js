@@ -16,6 +16,9 @@ eventcatControllers.controller('EventDetailCtrl', ['$scope', '$routeParams', '$h
     function($scope, $routeParams, $http) {
         $http.get('cities/' + $routeParams.name + '.json').success(function(data) {
             $scope.city = data;
+            $scope.num = $scope.city.mktoId;
+            console.log($scope.num);
+            MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", $scope.num);
         });
     }
 ]);
@@ -28,9 +31,39 @@ eventcatControllers.controller('DisplayCtrl', ['$scope', '$location',
     }
 ]);
 
-eventcatControllers.controller("htmlCtrl", function(){
-  this.html = "<script>alert('hi');</script>";
-});
+// eventcatControllers.controller("htmlCtrl", ['$scope', function($scope){
+//   this.html = "<h1>" + $scope.num + "</h1>";
+// }
+// ]);
+
+// eventcatControllers.factory('messages', function(){
+//     var messages = {};
+
+//     messages.list = [];
+
+//   messages.add = function(message){
+//     messages.list.push({id: messages.list.length, text: message});
+//   };
+
+//     return messages;
+// });
+
+// eventcatControllers.controller('ListCtrl', function (messages){
+//   var self = this;
+
+//   self.messages = messages.list;
+// });
+
+// eventcatControllers.controller('PostCtrl', function (messages){
+//   var self = this;
+
+//   self.newMessage = 'Hello World!';
+
+//   self.addMessage = function(message){
+//     messages.add(message);
+//     self.newMessage = '';
+//   };
+// });
 
 // eventcatControllers.controller('ContentCtrl', ['$scope', '$sce',
 //     function($scope, $sce) {
