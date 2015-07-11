@@ -55,7 +55,7 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
             <h2>Register Below</h2></div>
         <h3>{{city.mktoId|num}}</h3>
         <form class="ptl" id="mktoForm_{{city.mktoId}}"></form>
-        <div ng-controller="htmlCtrl as hi"><span ng-bind-html=" hi.html"></span>
+        <div ng-controller="htmlCtrl as hi"><span ng-bind-html="to_trusted(hi.html)"></span>
         </div>
         <br>
         <img src="img/side_column_image.jpg" alt="" />
