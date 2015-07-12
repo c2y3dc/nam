@@ -5,7 +5,8 @@
 var eventcatApp = angular.module('eventcatApp', [
   'ngRoute',
   'eventcatControllers',
-  'ngSanitize'
+  'ngFx',
+  'ngAnimate'
 ]);
 
 eventcatApp.config(['$routeProvider',
