@@ -4,7 +4,10 @@
 
 var eventcatApp = angular.module('eventcatApp', [
   'ngRoute',
-  'eventcatControllers'
+  'eventcatControllers',
+  'angulartics',
+  'angulartics.google.analytics',
+  'angulartics.marketo'
 ]);
 
 eventcatApp.config(['$routeProvider',
