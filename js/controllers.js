@@ -42,7 +42,7 @@ var eventcatFactories = angular.module('eventcatFactories', []);
 eventcatFactories.factory('httpFactory', ['$http', function($http){
 
     var getCity = function(cityId) {
-        return $http.get('/cities/' + cityId + '.json')
+        return $http.get('cities/' + cityId + '.json')
             .then(function(res){
                 return res.data;
             })

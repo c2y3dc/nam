@@ -5,7 +5,7 @@
 var eventcatApp = angular.module('eventcatApp', [
   'ngRoute',
   'eventcatControllers',
-  'eventcatFactories',
+  'eventcatFactories'
   // 'ngFx',
   // 'ngAnimate'
 ]);
