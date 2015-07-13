@@ -12,14 +12,20 @@ eventcatControllers.controller('EventListCtrl', ['$scope', '$http',
     }
 ]);
 
-eventcatControllers.controller('EventDetailCtrl', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
-        $http.get('cities/' + $routeParams.name + '.json').success(function(data) {
-            $scope.city = data;
-            $scope.num = $scope.city.mktoId;
-            console.log($scope.num);
-            MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", $scope.num);
-        });
+eventcatControllers.controller('EventDetailCtrl', ['$scope', '$routeParams', 'httpFactory',
+    function($scope, $routeParams, httpFactory) {
+
+        httpFactory.getCity($routeParams.name)
+            .then(function(data){
+                console.log(data);
+                $scope.city = data;
+                $scope.num = $scope.city.mktoId;
+                console.log($scope.num);
+                MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", $scope.num);
+            })
+            .catch(function(err){
+                console.log(err);
+            })
     }
 ]);
 
@@ -30,6 +36,24 @@ eventcatControllers.controller('DisplayCtrl', ['$scope', '$location',
         };
     }
 ]);
+
+var eventcatFactories = angular.module('eventcatFactories', []);
+
+eventcatFactories.factory('httpFactory', ['$http', function($http){
+
+    var getCity = function(cityId) {
+        return $http.get('/cities/' + cityId + '.json')
+            .then(function(res){
+                return res.data;
+            })
+            .catch(function(err){
+                console.log(err);
+            })
+    }
+
+    return { getCity: getCity }
+
+}]);
 
 // eventcatControllers.controller("htmlCtrl", ['$scope', function($scope){
 //   this.html = "<h1>" + $scope.num + "</h1>";
