@@ -43,7 +43,7 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
         <p align="center"><strong>{{city.Event}}</strong>
         </p>
         <div>
-            <p>{{city.content1}}</p>
+            <p ng-repeat="content in city.content1">{{content}}</p>
             <ul class="blurb">
                 <li ng-repeat="list in city.contentList">
                     {{list}}
