@@ -22,6 +22,7 @@ eventcatControllers.controller('EventListCtrl', ['$scope', 'httpEventsFactory',
             .catch(function(err) {
                 console.log(err);
             });
+    $scope.orderProp = 'calStart';
     }
 ]);
 
