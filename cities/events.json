@@ -9,7 +9,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Kansas City",
     "Start": "9/8/2015 @ 8 AM",
     "End": "9/9/2015 @ 1 PM",
-    "calStart": "20150909",
+    "age": 20150909,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Kansas City!  Venue: Kansas City Marriott Downtown (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Memphis",
@@ -22,9 +22,10 @@
     "OutlookSubject": "2015 OSIsoft Regional Seminar - Memphis",
     "Start": "9/15/2015 @ 8 AM",
     "End": "9/16/2015 @ 1 PM",
-    "calStart": "20150915",
+    "age": 20150915,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Memphis!  Venue: Sheraton Memphis Downtown Hotel (google map link)  Any questions, please contact NAMevents@osisoft.com."
-}, {
+}, 
+{
     "name": "Montreal",
     "Event": "Montreal Regional Seminar",
     "Date": "September 17-18, 2015",
@@ -35,8 +36,9 @@
     "OutlookSubject": "2015 OSIsoft Regional Seminar - Montreal",
     "Start": "9/15/2015 @ 8 AM",
     "End": "9/16/2015 @ 1 PM",
-    "calStart": "20150917"
-}, {
+    "age": 20150917
+}, 
+{
     "name": "OKC",
     "Event": "Oklahoma City Regional Seminar",
     "Date": "October 1-2, 2015",
@@ -47,7 +49,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Oklahoma City",
     "Start": "10/1/2015 @ 8 AM",
     "End": "10/2/2015 @ 1 PM",
-    "calStart": "20151001",
+    "age": 20151001,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Oklahoma City!  Venue: Devon Energy Headquarters (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Calgary",
@@ -60,7 +62,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Calgary",
     "Start": "10/6/2015 @ 8 AM",
     "End": "10/7/2015 @ 1 PM",
-    "calStart": "20151006",
+    "age": 20151006,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Calgary!  Venue: Hyatt Regency Calgary (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Denver",
@@ -73,7 +75,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Denver",
     "Start": "10/20/2015 @ 8 AM",
     "End": "10/21/2015 @ 1 PM",
-    "calStart": "20151020",
+    "age": 20151020,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Denver!  Venue: The Westin Denver Downtown (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Boston",
@@ -86,7 +88,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Boston",
     "Start": "10/27/2015 @ 8 AM",
     "End": "10/28/2015 @ 1 PM",
-    "calStart": "20151027",
+    "age": 20151027,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Boston!  Venue: Sheraton Needham Hotel (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Charlotte",
@@ -99,7 +101,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Charlotte",
     "Start": "11/5/2015 @ 8 AM",
     "End": "11/6/2015 @ 1 PM",
-    "calStart": "20151105",
+    "age": 20151105,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Charlotte!  Venue: Omni Hotels & Resorts Charlotte (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "NYC",
@@ -112,7 +114,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - New York City",
     "Start": "11/10/2015 @ 8 AM",
     "End": "11/11/2015 @ 1 PM",
-    "calStart": "20151110",
+    "age": 20151110,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in New York City!  Venue: Microsoft Technology Center (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Houston",
@@ -125,7 +127,7 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Houston",
     "Start": "11/12/2015 @ 8 AM",
     "End": "11/13/2015 @ 1 PM",
-    "calStart": "20151112",
+    "age": 20151112,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Houston!  Venue: The Houstin Westin Oaks at the Galleria (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }, {
     "name": "Philadelphia",
@@ -138,6 +140,6 @@
     "OutlookSubject": " 2015 OSIsoft Regional Seminar - Philadelphia",
     "Start": "11/17/2015 @ 8 AM",
     "End": "11/18/2015 @ 1 PM",
-    "calStart": "20151117",
+    "age": 20151117,
     "OutlookContent": "We look forward to seeing you at the 2015 OSIsoft Regional Seminar in Philadelphia!  Venue: Valley Forge Casino Resort (google map link)  Any questions, please contact NAMevents@osisoft.com."
 }]
