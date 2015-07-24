@@ -192,3 +192,7 @@ background:url("../img/social_linkedin.png") no-repeat;
 .social_pisquare a {
 background:url("../img/social_pisquare.png") no-repeat;
 }
+
+.rssbanner img{
+    margin-bottom: 1rem;
+}

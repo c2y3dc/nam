@@ -16,7 +16,7 @@
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="//app-sjh.marketo.com/js/forms2/js/forms2.min.js"></script>
-    <script type="text/javascript" src="scripts/slideshow.js"></script>
+    <!-- <script type="text/javascript" src="scripts/slideshow.js"></script> -->
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             <div class="clear"></div>
         </div>
         <div class="content">
-            <div ng-controller="DisplayCtrl" ng-show="isActive('/cities')" class="osiSlider">
+<!--             <div ng-controller="DisplayCtrl" ng-show="isActive('/cities')" class="osiSlider">
                 <ul class="osiSliderImgList" id="sliderList" data-interval="5000">
                     <li>
                         <a href="http://www.osisoft.com/uc2015/sf/index.html">
@@ -52,7 +52,9 @@
                         <span id="sliderPos"></span>
                         <span class="sliderNextPrev" id="sliderBtnNext">▶</span>
                     </div>
-                </div>
+                </div> -->
+            <div ng-controller="DisplayCtrl" ng-show="isActive('/cities')" class="rssbanner">
+                <img alt="NAM Regional Seminar Series" src="img/na-rss_banner.png" />
             </div>
             <div ng-view></div>
         </div>
