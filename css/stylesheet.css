@@ -196,3 +196,8 @@ background:url("../img/social_pisquare.png") no-repeat;
 .rssbanner img{
     margin-bottom: 1rem;
 }
+
+small {
+    font-size: 0.7rem;
+    font-style: italic;
+}
