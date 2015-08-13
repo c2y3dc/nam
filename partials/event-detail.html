@@ -24,9 +24,9 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
             <br>
         </td>
         <td style="width:45px">
-            <!-- <img src="img/agenda.png" alt="" /> --></td>
+            <img src="img/agenda.png" alt="" /></td>
         <td style="width:130px">
-            <!-- <a href="#/cities/{{city.name}}">Agenda</a> --></td>
+            <a href="{{(city.agenda) ? (&quot;downloads/&quot; + city.agenda) : (&quot;/#/cities/&quot; + city.name)}}">{{(city.agenda) ? "Agenda" : "Coming Soon"}}</a></td>
     </tr>
     <tr>
         <td style="width:45px">&nbsp;</td>
