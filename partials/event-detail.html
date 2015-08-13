@@ -3,7 +3,7 @@
 </div>
 <table class="keydata" cellpadding="8">
     <tr>
-        <td colspan="8" class="title">Key Data</td>
+        <td colspan="8" class="title">{{city.keyData||"Key Data"}}</td>
     </tr>
     <tr>
         <td style="width:45px">&nbsp;</td>
@@ -13,13 +13,20 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
             <br>
         </td>
         <td style="width:25px"><img src="img/location.png" alt="" /></td>
-        <td style="width:265px"><a href="https://www.google.com/maps/place/{{city.Address.split(&quot; &quot;).join(&quot;+&quot;)}}/" target="_blank">{{city.Location}},<br>
+        <!--         <td style="width:265px"><a href="https://www.google.com/maps/place/{{city.Address.split(&quot; &quot;).join(&quot;+&quot;)}}/" target="_blank">{{city.Location}},<br>
+        {{city.Address.split(",")[0]}},<br>
+{{city.Address.split(",")[1]}}, {{city.Address.split(",")[2]}}</a>
+            <br>
+        </td> -->
+        <td style="width:265px"><a href="http://maps.google.com/maps?q={{city.latLong}}" target="_blank">{{city.Location}},<br>
         {{city.Address.split(",")[0]}},<br>
 {{city.Address.split(",")[1]}}, {{city.Address.split(",")[2]}}</a>
             <br>
         </td>
-        <td style="width:45px"><img src="img/agenda.png" alt="" /></td>
-        <td style="width:130px"><a href="#/cities/{{city.name}}">Agenda</a></td>
+        <td style="width:45px">
+            <!-- <img src="img/agenda.png" alt="" /> --></td>
+        <td style="width:130px">
+            <!-- <a href="#/cities/{{city.name}}">Agenda</a> --></td>
     </tr>
     <tr>
         <td style="width:45px">&nbsp;</td>
@@ -36,13 +43,21 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
         <p align="center"><strong>{{city.Event}}</strong>
         </p>
         <div>
-            <p>{{city.content1}}</p>
+            <p ng-repeat="content in city.content1">{{content}}</p>
             <ul class="blurb">
                 <li ng-repeat="list in city.contentList">
                     {{list}}
                 </li>
             </ul>
             <p>{{city.content2}}</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <small>{{city.consent1 || "Consent to Public Posting of Photos and Video:"}}</small><br>
+            <small>{{city.consent2 || "By registering for this event, I consent to the photographing of myself and the recording of my voice and the use of these photographs and/or recordings singularly or in conjunction with other photographs and/or recordings for advertising, publicity, commercial or other business purposes. I understand that the term \"photograph\" as used herein encompasses both still photographs and motion picture footage. I further consent to the reproduction and/or authorization by OSIsoft to reproduce and use said photographs and recordings of my voice, for use in all domestic and foreign markets. Further, I understand that others, with or without the consent of OSIsoft, LLC. may use and/or reproduce such photographs and recordings. I hereby release OSIsoft and any of its associated or affiliated companies, their directors, officers, agents, employees and customers, and appointed advertising agencies, their directors, officers, agents and employees from all claims of every kind on account of such use."}}</small>
         </div>
         <div> </div>
         <div> </div>
@@ -50,13 +65,13 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     </div>
     <div class="panel-right">
         <div align="center">
-            <h2>Register Below</h2></div>
-<!--         <h3>{{city.mktoId|num}}</h3> -->
+            <h2>{{city.reg || "Register Below"}}</h2></div>
+        <!--         <h3>{{city.mktoId|num}}</h3> -->
         <form class="ptl" id="mktoForm_{{city.mktoId}}"></form>
         <br>
         <img src="img/side_column_image.jpg" alt="" />
-        <h2>Contact Us</h2>
-        <strong>For general questions</strong>, please contact NAM Events at
+        <h2>{{city.contact || "Contact Us"}}</h2>
+        <strong>{{city.contactUs1 || "For general questions"}}</strong>{{city.contactUs2 || ", please contact NAM Events at"}}
         <br>
         <a href="mailto:NAMevents@osisoft.com">NAMevents@osisoft.com</a>
         <br>
@@ -64,4 +79,3 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     </div>
     <div class="clear margin10"></div>
 </div>
-

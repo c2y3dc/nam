@@ -38,10 +38,11 @@ a,a:hover
     display:inline-block;
     height:60px;
     float:left;
-    font-size:50px;
+    font-size:38px;
     color:#007DC2;
     font-weight:bold;
     margin-left:60px;
+    padding-top: 30px;
 }
 
 .header img.rs
@@ -190,4 +191,13 @@ background:url("../img/social_linkedin.png") no-repeat;
 }
 .social_pisquare a {
 background:url("../img/social_pisquare.png") no-repeat;
+}
+
+.rssbanner img{
+    margin-bottom: 1rem;
+}
+
+small {
+    font-size: 0.7rem;
+    font-style: italic;
 }

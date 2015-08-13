@@ -4,11 +4,25 @@
 
 var eventcatControllers = angular.module('eventcatControllers', []);
 
-eventcatControllers.controller('EventListCtrl', ['$scope', '$http',
-    function($scope, $http) {
-        $http.get('cities/events.json').success(function(data) {
-            $scope.events = data;
-        });
+// eventcatControllers.controller('EventListCtrl', ['$scope', '$http',
+//     function($scope, $http) {
+//         $http.get('cities/events.json').success(function(data) {
+//             $scope.events = data;
+//         });
+//     }
+// ]);
+
+eventcatControllers.controller('EventListCtrl', ['$scope', 'httpEventsFactory',
+    function($scope, httpEventsFactory) {
+        httpEventsFactory.getEvents()
+            .then(function(data) {
+              console.log(data);
+                $scope.events = data;
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    $scope.orderProp = 'age';
     }
 ]);
 
@@ -16,14 +30,14 @@ eventcatControllers.controller('EventDetailCtrl', ['$scope', '$routeParams', 'ht
     function($scope, $routeParams, httpFactory) {
 
         httpFactory.getCity($routeParams.name)
-            .then(function(data){
+            .then(function(data) {
                 console.log(data);
                 $scope.city = data;
                 $scope.num = $scope.city.mktoId;
                 console.log($scope.num);
                 MktoForms2.loadForm("//app-sjh.marketo.com", "494-OYA-934", $scope.num);
             })
-            .catch(function(err){
+            .catch(function(err) {
                 console.log(err);
             })
     }
@@ -39,19 +53,39 @@ eventcatControllers.controller('DisplayCtrl', ['$scope', '$location',
 
 var eventcatFactories = angular.module('eventcatFactories', []);
 
-eventcatFactories.factory('httpFactory', ['$http', function($http){
+eventcatFactories.factory('httpFactory', ['$http', function($http) {
 
     var getCity = function(cityId) {
         return $http.get('cities/' + cityId + '.json')
-            .then(function(res){
+            .then(function(res) {
                 return res.data;
             })
-            .catch(function(err){
+            .catch(function(err) {
                 console.log(err);
-            })
-    }
+            });
+    };
 
-    return { getCity: getCity }
+    return {
+        getCity: getCity
+    };
+
+}]);
+
+eventcatFactories.factory('httpEventsFactory', ['$http', function($http) {
+
+    var getEvents = function() {
+        return $http.get('cities/events.json')
+            .then(function(res) {
+                return res.data;
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    };
+
+    return {
+        getEvents: getEvents
+    };
 
 }]);
 
