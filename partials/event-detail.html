@@ -66,7 +66,9 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     </div>
     <div class="panel-right">
         <div align="center">
-            <h2>{{city.reg || "Register Below"}}</h2></div>
+            <a href="{{(city.mktoLP) ? (city.mktoLP) : (&quot;#/cities/&quot; + city.name)}}">
+            <h2>{{city.reg || "Register"}}</h2></a>
+        </div>
         <!--         <h3>{{city.mktoId|num}}</h3> -->
         <form class="ptl" id="mktoForm_{{city.mktoId}}"></form>
         <br>
