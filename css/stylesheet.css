@@ -203,5 +203,10 @@ small {
 }
 
 .common-sense{
-    text-align: left;
+    color:#2271b8;
+    text-align: center;
+}
+
+.common-sense small {
+    font-size: 0.9rem
 }
