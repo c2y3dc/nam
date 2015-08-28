@@ -50,6 +50,7 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
                 </li>
             </ul>
             <p>{{city.content2}}</p>
+            <a href="{{city.mktoLP}}"><p>Click here to register</p></a>
             <img src="{{city.infographic}}"/>
             <br>
             <br>
@@ -67,7 +68,7 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
     <div class="panel-right">
         <div align="center">
             <a href="{{(city.mktoLP) ? (city.mktoLP) : (&quot;#/cities/&quot; + city.name)}}">
-            <h2>{{city.reg || "Register"}}</h2></a>
+            <h2>{{city.reg || "Register Here"}}</h2></a>
         </div>
         <!--         <h3>{{city.mktoId|num}}</h3> -->
         <form class="ptl" id="mktoForm_{{city.mktoId}}"></form>
