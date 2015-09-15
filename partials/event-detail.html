@@ -80,9 +80,9 @@ action=TEMPLATE&amp;text=OSIsoft+{{city.Event}}&amp;dates={{city.calStart}}%2F{{
         <a href="mailto:NAMevents@osisoft.com">NAMevents@osisoft.com</a>
         <br>
         <br>
-        <h2>Sponsors</h2>
+        <h2>{{(city.sponsors) ? "Sponsors": "" }}</h2>
         <div ng-repeat="logo in city.sponsors">
-            <img style="width: 260px; margin: 2rem 0 3rem 0;" src="img/{{logo}}"/>
+            <img style="max-width: 200px; max-height: 120px; margin: 2rem auto;" src="img/{{logo}}"/>
         </div>
     </div>
     <div class="clear margin10"></div>
